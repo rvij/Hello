@@ -1,0 +1,501 @@
+11/20/2012 11:06:08 AM : AutodiscoverConfiguration --- <Trace Tag="AutodiscoverConfiguration" Tid="16" Time="2012-11-20 17:06:08Z">
+Starting SCP lookup for domainName='mail.stage.cisco.com', root path='
+</Trace>
+
+11/20/2012 11:06:10 AM : AutodiscoverConfiguration --- <Trace Tag="AutodiscoverConfiguration" Tid="16" Time="2012-11-20 17:06:10Z">
+LDAP call failed, exception: System.Runtime.InteropServices.COMException (0x8007054B): The specified domain either does not exist or could not be contacted.
+
+   at System.DirectoryServices.DirectoryEntry.Bind(Boolean throwIfFail)
+   at System.DirectoryServices.DirectoryEntry.Bind()
+   at System.DirectoryServices.DirectoryEntry.get_AdsObject()
+   at System.DirectoryServices.PropertyValueCollection.PopulateList()
+   at System.DirectoryServices.PropertyValueCollection..ctor(DirectoryEntry entry, String propertyName)
+   at System.DirectoryServices.PropertyCollection.get_Item(String propertyName)
+   at Microsoft.Exchange.WebServices.Autodiscover.DirectoryHelper.GetScpUrlList(String domainName, String ldapPath, Int32&amp; maxHops)
+   at Microsoft.Exchange.WebServices.Autodiscover.DirectoryHelper.GetAutodiscoverScpUrlsForDomain(String domainName)
+</Trace>
+
+11/20/2012 11:06:10 AM : AutodiscoverConfiguration --- <Trace Tag="AutodiscoverConfiguration" Tid="16" Time="2012-11-20 17:06:10Z">
+Trying to call Autodiscover for rvij@mail.stage.cisco.com on https://mail.stage.cisco.com/autodiscover/autodiscover.xml.
+</Trace>
+
+11/20/2012 11:06:10 AM : AutodiscoverRequest --- <Trace Tag="AutodiscoverRequest" Tid="16" Time="2012-11-20 17:06:10Z" Version="14.02.0051.000">
+  <Autodiscover xmlns="http://schemas.microsoft.com/exchange/autodiscover/outlook/requestschema/2006">
+    <Request>
+      <EMailAddress>rvij@mail.stage.cisco.com</EMailAddress>
+      <AcceptableResponseSchema>http://schemas.microsoft.com/exchange/autodiscover/outlook/responseschema/2006a</AcceptableResponseSchema>
+    </Request>
+  </Autodiscover>
+</Trace>
+
+11/20/2012 11:06:26 AM : AutodiscoverResponse --- <Trace Tag="AutodiscoverResponse" Tid="16" Time="2012-11-20 17:06:26Z" Version="14.02.0051.000">
+  <?xml version="1.0" encoding="utf-8"?>
+  <Autodiscover xmlns="http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006">
+    <Response xmlns="http://schemas.microsoft.com/exchange/autodiscover/outlook/responseschema/2006a">
+      <User>
+        <DisplayName>Rajeev Vij (rvij)</DisplayName>
+        <LegacyDN>/o=Cisco Systems/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=rvij3f0</LegacyDN>
+        <AutoDiscoverSMTPAddress>rvij@mail.stage.cisco.com</AutoDiscoverSMTPAddress>
+        <DeploymentId>7b16f618-b772-43cc-84de-b793fdc0afcb</DeploymentId>
+      </User>
+      <Account>
+        <AccountType>email</AccountType>
+        <Action>settings</Action>
+        <Protocol>
+          <Type>EXCH</Type>
+          <Server>XCHCASSTG.stage.cisco.com</Server>
+          <ServerDN>/o=Cisco Systems/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=XCHCASSTG.stage.cisco.com</ServerDN>
+          <ServerVersion>738280F7</ServerVersion>
+          <MdbDN>/o=Cisco Systems/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=XCHCASSTG.stage.cisco.com/cn=Microsoft Private MDB</MdbDN>
+          <AD>adc-rtp1-s1-1-w.stage.cisco.com</AD>
+          <ASUrl>https://mail.stage.cisco.com/ews/exchange.asmx</ASUrl>
+          <EwsUrl>https://mail.stage.cisco.com/ews/exchange.asmx</EwsUrl>
+          <EcpUrl>https://mail.stage.cisco.com/ecp/</EcpUrl>
+          <EcpUrl-um>?p=customize/voicemail.aspx&amp;exsvurl=1</EcpUrl-um>
+          <EcpUrl-aggr>?p=personalsettings/EmailSubscriptions.slab&amp;exsvurl=1</EcpUrl-aggr>
+          <EcpUrl-mt>PersonalSettings/DeliveryReport.aspx?exsvurl=1&amp;IsOWA=&lt;IsOWA&gt;&amp;MsgID=&lt;MsgID&gt;&amp;Mbx=&lt;Mbx&gt;</EcpUrl-mt>
+          <EcpUrl-ret>?p=organize/retentionpolicytags.slab&amp;exsvurl=1</EcpUrl-ret>
+          <EcpUrl-sms>?p=sms/textmessaging.slab&amp;exsvurl=1</EcpUrl-sms>
+          <OOFUrl>https://mail.stage.cisco.com/ews/exchange.asmx</OOFUrl>
+          <UMUrl>https://mail.stage.cisco.com/ews/UM2007Legacy.asmx</UMUrl>
+          <OABUrl>https://mail.stage.cisco.com/oab/26849b67-c342-42fb-9acb-4d60427eaaac/</OABUrl>
+        </Protocol>
+        <Protocol>
+          <Type>EXPR</Type>
+          <Server>mail.stage.cisco.com</Server>
+          <SSL>On</SSL>
+          <AuthPackage>Basic</AuthPackage>
+          <ASUrl>https://mail.stage.cisco.com/ews/exchange.asmx</ASUrl>
+          <EwsUrl>https://mail.stage.cisco.com/ews/exchange.asmx</EwsUrl>
+          <EcpUrl>https://mail.stage.cisco.com/ecp/</EcpUrl>
+          <EcpUrl-um>?p=customize/voicemail.aspx&amp;exsvurl=1</EcpUrl-um>
+          <EcpUrl-aggr>?p=personalsettings/EmailSubscriptions.slab&amp;exsvurl=1</EcpUrl-aggr>
+          <EcpUrl-mt>PersonalSettings/DeliveryReport.aspx?exsvurl=1&amp;IsOWA=&lt;IsOWA&gt;&amp;MsgID=&lt;MsgID&gt;&amp;Mbx=&lt;Mbx&gt;</EcpUrl-mt>
+          <EcpUrl-ret>?p=organize/retentionpolicytags.slab&amp;exsvurl=1</EcpUrl-ret>
+          <EcpUrl-sms>?p=sms/textmessaging.slab&amp;exsvurl=1</EcpUrl-sms>
+          <OOFUrl>https://mail.stage.cisco.com/ews/exchange.asmx</OOFUrl>
+          <UMUrl>https://mail.stage.cisco.com/ews/UM2007Legacy.asmx</UMUrl>
+          <OABUrl>https://mail.stage.cisco.com/oab/26849b67-c342-42fb-9acb-4d60427eaaac/</OABUrl>
+        </Protocol>
+        <Protocol>
+          <Type>WEB</Type>
+          <Internal>
+            <OWAUrl AuthenticationMethod="Basic, Fba">https://mail.stage.cisco.com/owa/</OWAUrl>
+            <Protocol>
+              <Type>EXCH</Type>
+              <ASUrl>https://mail.stage.cisco.com/ews/exchange.asmx</ASUrl>
+            </Protocol>
+          </Internal>
+          <External>
+            <OWAUrl AuthenticationMethod="Fba">https://mail.stage.cisco.com/owa/</OWAUrl>
+            <Protocol>
+              <Type>EXPR</Type>
+              <ASUrl>https://mail.stage.cisco.com/ews/exchange.asmx</ASUrl>
+            </Protocol>
+          </External>
+        </Protocol>
+      </Account>
+    </Response>
+  </Autodiscover>
+</Trace>
+
+11/20/2012 11:06:26 AM : EwsRequest --- <Trace Tag="EwsRequest" Tid="16" Time="2012-11-20 17:06:26Z" Version="14.02.0051.000">
+  <?xml version="1.0" encoding="utf-8"?>
+  <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+      <t:RequestServerVersion Version="Exchange2007_SP1" />
+      <t:TimeZoneContext>
+        <t:TimeZoneDefinition Id="Central Standard Time" />
+      </t:TimeZoneContext>
+      <t:ExchangeImpersonation>
+        <t:ConnectingSID>
+          <t:PrimarySmtpAddress>rvij@mail.stage.cisco.com</t:PrimarySmtpAddress>
+        </t:ConnectingSID>
+      </t:ExchangeImpersonation>
+    </soap:Header>
+    <soap:Body>
+      <m:FindItem Traversal="Shallow">
+        <m:ItemShape>
+          <t:BaseShape>IdOnly</t:BaseShape>
+        </m:ItemShape>
+        <m:CalendarView StartDate="2012-04-01T05:00:00Z" EndDate="2012-05-21T05:00:00Z" />
+        <m:ParentFolderIds>
+          <t:DistinguishedFolderId Id="calendar" />
+        </m:ParentFolderIds>
+      </m:FindItem>
+    </soap:Body>
+  </soap:Envelope>
+</Trace>
+
+11/20/2012 11:06:26 AM : EwsResponse --- <Trace Tag="EwsResponse" Tid="16" Time="2012-11-20 17:06:26Z" Version="14.02.0051.000">
+  <?xml version="1.0" encoding="utf-8"?>
+  <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+    <s:Header>
+      <h:ServerVersionInfo MajorVersion="14" MinorVersion="2" MajorBuildNumber="318" MinorBuildNumber="4" Version="Exchange2010_SP2" xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+    </s:Header>
+    <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <m:FindItemResponse xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+        <m:ResponseMessages>
+          <m:FindItemResponseMessage ResponseClass="Success">
+            <m:ResponseCode>NoError</m:ResponseCode>
+            <m:RootFolder TotalItemsInView="0" IncludesLastItemInRange="true">
+              <t:Items />
+            </m:RootFolder>
+          </m:FindItemResponseMessage>
+        </m:ResponseMessages>
+      </m:FindItemResponse>
+    </s:Body>
+  </s:Envelope>
+</Trace>
+
+11/20/2012 11:06:26 AM : EwsRequest --- <Trace Tag="EwsRequest" Tid="16" Time="2012-11-20 17:06:26Z" Version="14.02.0051.000">
+  <?xml version="1.0" encoding="utf-8"?>
+  <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+      <t:RequestServerVersion Version="Exchange2007_SP1" />
+      <t:TimeZoneContext>
+        <t:TimeZoneDefinition Id="Central Standard Time" />
+      </t:TimeZoneContext>
+      <t:ExchangeImpersonation>
+        <t:ConnectingSID>
+          <t:PrimarySmtpAddress>rvij@mail.stage.cisco.com</t:PrimarySmtpAddress>
+        </t:ConnectingSID>
+      </t:ExchangeImpersonation>
+    </soap:Header>
+    <soap:Body>
+      <m:FindItem Traversal="Shallow">
+        <m:ItemShape>
+          <t:BaseShape>IdOnly</t:BaseShape>
+        </m:ItemShape>
+        <m:CalendarView StartDate="2012-05-21T05:00:00Z" EndDate="2012-07-10T05:00:00Z" />
+        <m:ParentFolderIds>
+          <t:DistinguishedFolderId Id="calendar" />
+        </m:ParentFolderIds>
+      </m:FindItem>
+    </soap:Body>
+  </soap:Envelope>
+</Trace>
+
+11/20/2012 11:06:26 AM : EwsResponse --- <Trace Tag="EwsResponse" Tid="16" Time="2012-11-20 17:06:26Z" Version="14.02.0051.000">
+  <?xml version="1.0" encoding="utf-8"?>
+  <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+    <s:Header>
+      <h:ServerVersionInfo MajorVersion="14" MinorVersion="2" MajorBuildNumber="318" MinorBuildNumber="4" Version="Exchange2010_SP2" xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+    </s:Header>
+    <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <m:FindItemResponse xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+        <m:ResponseMessages>
+          <m:FindItemResponseMessage ResponseClass="Success">
+            <m:ResponseCode>NoError</m:ResponseCode>
+            <m:RootFolder TotalItemsInView="0" IncludesLastItemInRange="true">
+              <t:Items />
+            </m:RootFolder>
+          </m:FindItemResponseMessage>
+        </m:ResponseMessages>
+      </m:FindItemResponse>
+    </s:Body>
+  </s:Envelope>
+</Trace>
+
+11/20/2012 11:06:26 AM : EwsRequest --- <Trace Tag="EwsRequest" Tid="16" Time="2012-11-20 17:06:26Z" Version="14.02.0051.000">
+  <?xml version="1.0" encoding="utf-8"?>
+  <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+      <t:RequestServerVersion Version="Exchange2007_SP1" />
+      <t:TimeZoneContext>
+        <t:TimeZoneDefinition Id="Central Standard Time" />
+      </t:TimeZoneContext>
+      <t:ExchangeImpersonation>
+        <t:ConnectingSID>
+          <t:PrimarySmtpAddress>rvij@mail.stage.cisco.com</t:PrimarySmtpAddress>
+        </t:ConnectingSID>
+      </t:ExchangeImpersonation>
+    </soap:Header>
+    <soap:Body>
+      <m:FindItem Traversal="Shallow">
+        <m:ItemShape>
+          <t:BaseShape>IdOnly</t:BaseShape>
+        </m:ItemShape>
+        <m:CalendarView StartDate="2012-07-10T05:00:00Z" EndDate="2012-08-29T05:00:00Z" />
+        <m:ParentFolderIds>
+          <t:DistinguishedFolderId Id="calendar" />
+        </m:ParentFolderIds>
+      </m:FindItem>
+    </soap:Body>
+  </soap:Envelope>
+</Trace>
+
+11/20/2012 11:06:27 AM : EwsResponse --- <Trace Tag="EwsResponse" Tid="16" Time="2012-11-20 17:06:27Z" Version="14.02.0051.000">
+  <?xml version="1.0" encoding="utf-8"?>
+  <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+    <s:Header>
+      <h:ServerVersionInfo MajorVersion="14" MinorVersion="2" MajorBuildNumber="318" MinorBuildNumber="4" Version="Exchange2010_SP2" xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+    </s:Header>
+    <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <m:FindItemResponse xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+        <m:ResponseMessages>
+          <m:FindItemResponseMessage ResponseClass="Success">
+            <m:ResponseCode>NoError</m:ResponseCode>
+            <m:RootFolder TotalItemsInView="0" IncludesLastItemInRange="true">
+              <t:Items />
+            </m:RootFolder>
+          </m:FindItemResponseMessage>
+        </m:ResponseMessages>
+      </m:FindItemResponse>
+    </s:Body>
+  </s:Envelope>
+</Trace>
+
+11/20/2012 11:06:27 AM : EwsRequest --- <Trace Tag="EwsRequest" Tid="16" Time="2012-11-20 17:06:27Z" Version="14.02.0051.000">
+  <?xml version="1.0" encoding="utf-8"?>
+  <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+      <t:RequestServerVersion Version="Exchange2007_SP1" />
+      <t:TimeZoneContext>
+        <t:TimeZoneDefinition Id="Central Standard Time" />
+      </t:TimeZoneContext>
+      <t:ExchangeImpersonation>
+        <t:ConnectingSID>
+          <t:PrimarySmtpAddress>rvij@mail.stage.cisco.com</t:PrimarySmtpAddress>
+        </t:ConnectingSID>
+      </t:ExchangeImpersonation>
+    </soap:Header>
+    <soap:Body>
+      <m:FindItem Traversal="Shallow">
+        <m:ItemShape>
+          <t:BaseShape>IdOnly</t:BaseShape>
+        </m:ItemShape>
+        <m:CalendarView StartDate="2012-08-29T05:00:00Z" EndDate="2012-10-18T05:00:00Z" />
+        <m:ParentFolderIds>
+          <t:DistinguishedFolderId Id="calendar" />
+        </m:ParentFolderIds>
+      </m:FindItem>
+    </soap:Body>
+  </soap:Envelope>
+</Trace>
+
+11/20/2012 11:06:27 AM : EwsResponse --- <Trace Tag="EwsResponse" Tid="16" Time="2012-11-20 17:06:27Z" Version="14.02.0051.000">
+  <?xml version="1.0" encoding="utf-8"?>
+  <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+    <s:Header>
+      <h:ServerVersionInfo MajorVersion="14" MinorVersion="2" MajorBuildNumber="318" MinorBuildNumber="4" Version="Exchange2010_SP2" xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+    </s:Header>
+    <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <m:FindItemResponse xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+        <m:ResponseMessages>
+          <m:FindItemResponseMessage ResponseClass="Success">
+            <m:ResponseCode>NoError</m:ResponseCode>
+            <m:RootFolder TotalItemsInView="0" IncludesLastItemInRange="true">
+              <t:Items />
+            </m:RootFolder>
+          </m:FindItemResponseMessage>
+        </m:ResponseMessages>
+      </m:FindItemResponse>
+    </s:Body>
+  </s:Envelope>
+</Trace>
+
+11/20/2012 11:06:27 AM : EwsRequest --- <Trace Tag="EwsRequest" Tid="16" Time="2012-11-20 17:06:27Z" Version="14.02.0051.000">
+  <?xml version="1.0" encoding="utf-8"?>
+  <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+      <t:RequestServerVersion Version="Exchange2007_SP1" />
+      <t:TimeZoneContext>
+        <t:TimeZoneDefinition Id="Central Standard Time" />
+      </t:TimeZoneContext>
+      <t:ExchangeImpersonation>
+        <t:ConnectingSID>
+          <t:PrimarySmtpAddress>rvij@mail.stage.cisco.com</t:PrimarySmtpAddress>
+        </t:ConnectingSID>
+      </t:ExchangeImpersonation>
+    </soap:Header>
+    <soap:Body>
+      <m:FindItem Traversal="Shallow">
+        <m:ItemShape>
+          <t:BaseShape>IdOnly</t:BaseShape>
+        </m:ItemShape>
+        <m:CalendarView StartDate="2012-10-18T05:00:00Z" EndDate="2012-11-21T06:00:00Z" />
+        <m:ParentFolderIds>
+          <t:DistinguishedFolderId Id="calendar" />
+        </m:ParentFolderIds>
+      </m:FindItem>
+    </soap:Body>
+  </soap:Envelope>
+</Trace>
+
+11/20/2012 11:06:27 AM : EwsResponse --- <Trace Tag="EwsResponse" Tid="16" Time="2012-11-20 17:06:27Z" Version="14.02.0051.000">
+  <?xml version="1.0" encoding="utf-8"?>
+  <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+    <s:Header>
+      <h:ServerVersionInfo MajorVersion="14" MinorVersion="2" MajorBuildNumber="318" MinorBuildNumber="4" Version="Exchange2010_SP2" xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+    </s:Header>
+    <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <m:FindItemResponse xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+        <m:ResponseMessages>
+          <m:FindItemResponseMessage ResponseClass="Success">
+            <m:ResponseCode>NoError</m:ResponseCode>
+            <m:RootFolder TotalItemsInView="2" IncludesLastItemInRange="true">
+              <t:Items>
+                <t:CalendarItem>
+                  <t:ItemId Id="AAMkAGFiMGJmZTM0LTM3NWYtNGMwYi1hMTMxLWQxZmVlODQwYThjYQBGAAAAAACxTBq8OD5PQLfggFBP0RiRBwDhEcweyJp8SLqkapLcylBRAAAA+NqyAADhEcweyJp8SLqkapLcylBRAAAA+QQfAAA=" ChangeKey="DwAAABYAAADhEcweyJp8SLqkapLcylBRAAAA+TeH" />
+                </t:CalendarItem>
+                <t:CalendarItem>
+                  <t:ItemId Id="AAMkAGFiMGJmZTM0LTM3NWYtNGMwYi1hMTMxLWQxZmVlODQwYThjYQBGAAAAAACxTBq8OD5PQLfggFBP0RiRBwDhEcweyJp8SLqkapLcylBRAAAA+NqyAADhEcweyJp8SLqkapLcylBRAAAA+QQgAAA=" ChangeKey="DwAAABYAAADhEcweyJp8SLqkapLcylBRAAAA+Teq" />
+                </t:CalendarItem>
+              </t:Items>
+            </m:RootFolder>
+          </m:FindItemResponseMessage>
+        </m:ResponseMessages>
+      </m:FindItemResponse>
+    </s:Body>
+  </s:Envelope>
+</Trace>
+
+11/20/2012 11:06:27 AM : EwsRequest --- <Trace Tag="EwsRequest" Tid="16" Time="2012-11-20 17:06:27Z" Version="14.02.0051.000">
+  <?xml version="1.0" encoding="utf-8"?>
+  <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+      <t:RequestServerVersion Version="Exchange2007_SP1" />
+      <t:TimeZoneContext>
+        <t:TimeZoneDefinition Id="Central Standard Time" />
+      </t:TimeZoneContext>
+      <t:ExchangeImpersonation>
+        <t:ConnectingSID>
+          <t:PrimarySmtpAddress>rvij@mail.stage.cisco.com</t:PrimarySmtpAddress>
+        </t:ConnectingSID>
+      </t:ExchangeImpersonation>
+    </soap:Header>
+    <soap:Body>
+      <m:GetItem>
+        <m:ItemShape>
+          <t:BaseShape>IdOnly</t:BaseShape>
+          <t:AdditionalProperties>
+            <t:FieldURI FieldURI="calendar:Organizer" />
+            <t:FieldURI FieldURI="item:DateTimeCreated" />
+            <t:FieldURI FieldURI="item:DateTimeSent" />
+            <t:FieldURI FieldURI="item:DateTimeReceived" />
+            <t:FieldURI FieldURI="item:Subject" />
+            <t:FieldURI FieldURI="calendar:CalendarItemType" />
+            <t:FieldURI FieldURI="calendar:Duration" />
+            <t:FieldURI FieldURI="calendar:Start" />
+            <t:FieldURI FieldURI="calendar:End" />
+            <t:FieldURI FieldURI="item:Importance" />
+            <t:FieldURI FieldURI="item:InReplyTo" />
+            <t:FieldURI FieldURI="calendar:IsCancelled" />
+            <t:FieldURI FieldURI="calendar:IsMeeting" />
+            <t:FieldURI FieldURI="calendar:IsRecurring" />
+            <t:FieldURI FieldURI="item:ItemClass" />
+            <t:FieldURI FieldURI="calendar:Location" />
+            <t:FieldURI FieldURI="calendar:MyResponseType" />
+            <t:FieldURI FieldURI="calendar:OptionalAttendees" />
+            <t:FieldURI FieldURI="calendar:RequiredAttendees" />
+            <t:FieldURI FieldURI="item:Sensitivity" />
+            <t:FieldURI FieldURI="calendar:UID" />
+            <t:FieldURI FieldURI="calendar:AppointmentReplyTime" />
+            <t:FieldURI FieldURI="calendar:AppointmentState" />
+            <t:FieldURI FieldURI="calendar:IsAllDayEvent" />
+            <t:FieldURI FieldURI="item:ItemId" />
+          </t:AdditionalProperties>
+        </m:ItemShape>
+        <m:ItemIds>
+          <t:ItemId Id="AAMkAGFiMGJmZTM0LTM3NWYtNGMwYi1hMTMxLWQxZmVlODQwYThjYQBGAAAAAACxTBq8OD5PQLfggFBP0RiRBwDhEcweyJp8SLqkapLcylBRAAAA+NqyAADhEcweyJp8SLqkapLcylBRAAAA+QQfAAA=" ChangeKey="DwAAABYAAADhEcweyJp8SLqkapLcylBRAAAA+TeH" />
+          <t:ItemId Id="AAMkAGFiMGJmZTM0LTM3NWYtNGMwYi1hMTMxLWQxZmVlODQwYThjYQBGAAAAAACxTBq8OD5PQLfggFBP0RiRBwDhEcweyJp8SLqkapLcylBRAAAA+NqyAADhEcweyJp8SLqkapLcylBRAAAA+QQgAAA=" ChangeKey="DwAAABYAAADhEcweyJp8SLqkapLcylBRAAAA+Teq" />
+        </m:ItemIds>
+      </m:GetItem>
+    </soap:Body>
+  </soap:Envelope>
+</Trace>
+
+11/20/2012 11:06:27 AM : EwsResponse --- <Trace Tag="EwsResponse" Tid="16" Time="2012-11-20 17:06:27Z" Version="14.02.0051.000">
+  <?xml version="1.0" encoding="utf-8"?>
+  <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+    <s:Header>
+      <h:ServerVersionInfo MajorVersion="14" MinorVersion="2" MajorBuildNumber="318" MinorBuildNumber="4" Version="Exchange2010_SP2" xmlns:h="http://schemas.microsoft.com/exchange/services/2006/types" xmlns="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+    </s:Header>
+    <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <m:GetItemResponse xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+        <m:ResponseMessages>
+          <m:GetItemResponseMessage ResponseClass="Success">
+            <m:ResponseCode>NoError</m:ResponseCode>
+            <m:Items>
+              <t:CalendarItem>
+                <t:ItemId Id="AAMkAGFiMGJmZTM0LTM3NWYtNGMwYi1hMTMxLWQxZmVlODQwYThjYQBGAAAAAACxTBq8OD5PQLfggFBP0RiRBwDhEcweyJp8SLqkapLcylBRAAAA+NqyAADhEcweyJp8SLqkapLcylBRAAAA+QQfAAA=" ChangeKey="DwAAABYAAADhEcweyJp8SLqkapLcylBRAAAA+TeH" />
+                <t:ItemClass>IPM.Appointment</t:ItemClass>
+                <t:Subject>Test Meeting with folks</t:Subject>
+                <t:Sensitivity>Normal</t:Sensitivity>
+                <t:DateTimeReceived>2012-11-20T17:00:07Z</t:DateTimeReceived>
+                <t:Importance>Normal</t:Importance>
+                <t:DateTimeSent>2012-11-20T17:00:07Z</t:DateTimeSent>
+                <t:DateTimeCreated>2012-11-20T17:00:07Z</t:DateTimeCreated>
+                <t:UID>040000008200E00074C5B7101A82E0080000000007A55D7E40C7CD0100000000000000001000000054E8BA5FA3952548AE17198C141CF52B</t:UID>
+                <t:Start>2012-11-20T17:00:00Z</t:Start>
+                <t:End>2012-11-20T18:00:00Z</t:End>
+                <t:IsAllDayEvent>false</t:IsAllDayEvent>
+                <t:Location>Meeting in stage</t:Location>
+                <t:IsMeeting>false</t:IsMeeting>
+                <t:IsCancelled>false</t:IsCancelled>
+                <t:IsRecurring>false</t:IsRecurring>
+                <t:CalendarItemType>Single</t:CalendarItemType>
+                <t:MyResponseType>Organizer</t:MyResponseType>
+                <t:Organizer>
+                  <t:Mailbox>
+                    <t:Name>Rajeev Vij (rvij)</t:Name>
+                    <t:EmailAddress>rvij@mail.stage.cisco.com</t:EmailAddress>
+                    <t:RoutingType>SMTP</t:RoutingType>
+                  </t:Mailbox>
+                </t:Organizer>
+                <t:Duration>PT1H</t:Duration>
+                <t:AppointmentState>0</t:AppointmentState>
+              </t:CalendarItem>
+            </m:Items>
+          </m:GetItemResponseMessage>
+          <m:GetItemResponseMessage ResponseClass="Success">
+            <m:ResponseCode>NoError</m:ResponseCode>
+            <m:Items>
+              <t:CalendarItem>
+                <t:ItemId Id="AAMkAGFiMGJmZTM0LTM3NWYtNGMwYi1hMTMxLWQxZmVlODQwYThjYQBGAAAAAACxTBq8OD5PQLfggFBP0RiRBwDhEcweyJp8SLqkapLcylBRAAAA+NqyAADhEcweyJp8SLqkapLcylBRAAAA+QQgAAA=" ChangeKey="DwAAABYAAADhEcweyJp8SLqkapLcylBRAAAA+Teq" />
+                <t:ItemClass>IPM.Appointment</t:ItemClass>
+                <t:Subject>Test meeting today from stage</t:Subject>
+                <t:Sensitivity>Normal</t:Sensitivity>
+                <t:DateTimeReceived>2012-11-20T17:01:11Z</t:DateTimeReceived>
+                <t:Importance>Normal</t:Importance>
+                <t:DateTimeSent>2012-11-20T17:01:11Z</t:DateTimeSent>
+                <t:DateTimeCreated>2012-11-20T17:01:11Z</t:DateTimeCreated>
+                <t:UID>040000008200E00074C5B7101A82E00800000000D645C7A440C7CD01000000000000000010000000C45CE1520A46AD46BA54C55B58C74DC7</t:UID>
+                <t:Start>2012-11-20T17:00:00Z</t:Start>
+                <t:End>2012-11-20T17:30:00Z</t:End>
+                <t:IsAllDayEvent>false</t:IsAllDayEvent>
+                <t:Location>Stage Meeting</t:Location>
+                <t:IsMeeting>true</t:IsMeeting>
+                <t:IsCancelled>false</t:IsCancelled>
+                <t:IsRecurring>false</t:IsRecurring>
+                <t:CalendarItemType>Single</t:CalendarItemType>
+                <t:MyResponseType>Organizer</t:MyResponseType>
+                <t:Organizer>
+                  <t:Mailbox>
+                    <t:Name>Rajeev Vij (rvij)</t:Name>
+                    <t:EmailAddress>rvij@mail.stage.cisco.com</t:EmailAddress>
+                    <t:RoutingType>SMTP</t:RoutingType>
+                  </t:Mailbox>
+                </t:Organizer>
+                <t:RequiredAttendees>
+                  <t:Attendee>
+                    <t:Mailbox>
+                      <t:Name>rvij@cisco.com</t:Name>
+                      <t:EmailAddress>rvij@cisco.com</t:EmailAddress>
+                      <t:RoutingType>SMTP</t:RoutingType>
+                    </t:Mailbox>
+                    <t:ResponseType>Unknown</t:ResponseType>
+                  </t:Attendee>
+                </t:RequiredAttendees>
+                <t:Duration>PT30M</t:Duration>
+                <t:AppointmentState>1</t:AppointmentState>
+              </t:CalendarItem>
+            </m:Items>
+          </m:GetItemResponseMessage>
+        </m:ResponseMessages>
+      </m:GetItemResponse>
+    </s:Body>
+  </s:Envelope>
+</Trace>
+
