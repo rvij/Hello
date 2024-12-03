@@ -8,5 +8,7 @@ made a local change
 made one more remote change   
 made one more remote change    
 made yet one more remote change    
+<<<<<<< HEAD
 made a remote change to rvijb branch directly      
 made a local change in rvij branch    
+made a remote change to rvijb branch directly and conflict        
